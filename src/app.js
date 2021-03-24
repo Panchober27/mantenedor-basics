@@ -14,26 +14,38 @@ app.set("view engine", "ejs");
 // Middlewares.
 app.use(morgan("dev"));
 // Aqui iran las confguraciones de la base de datos.
+// app.use(
+//   myconnection(
+//     mysql,
+//     {
+//       host: "localhost",
+//       user: "root",
+//       password: "admin",
+//       port: 3306,
+//       database: "empleados_basic_db",
+//     },
+//     "single"
+//   )
+// );
+// Configuración bd remota a futuro😋😋
 app.use(
   myconnection(
     mysql,
     {
-      host: "localhost",
-      user: "root",
-      password: "admin",
+      host: "bwb26jvsxkjvjhjvdagw-mysql.services.clever-cloud.com",
+      user: "u9qq1kcxqujoa3wa",
+      password: "7gXqJhtuFLkFoJNZ6D5W",
       port: 3306,
-      database: "empleados_basic_db",
+      database: "bwb26jvsxkjvjhjvdagw",
     },
     "single"
   )
 );
-// Configuración bd remota a futuro😋😋
 
 // Datos tipo json.
 app.use(express.json());
 // URL encoded.
-app.use(express.urlencoded({extended: false}));
-
+app.use(express.urlencoded({ extended: false }));
 
 // Static files.
 app.use(express.static(path.join(__dirname, "public")));
