@@ -12,6 +12,11 @@ router.get("/", (req, res) => {
   });
 });
 
+
+
+// Ruta para logear un jefe.
+router.get('/logJefe', jefesController.login);
+
 // Ruta para listar los empleados.
 router.get("/list-emp", empleadosController.list);
 

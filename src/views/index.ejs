@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('layouts/_head.ejs') %>
-    <title><%=title%></title>
+        <title>
+            <%=title%>
+        </title>
 </head>
+
 <body>
     <%- include('layouts/_nav.ejs') %>
 
-    <h1 style="text-align: center;"><%=title%></h1>
+        <h1 style="text-align: center;">
+            <%=title%>
+        </h1>
+        <form action="/logJefe" method="GET">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usr" name="usr" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="pass" id="pass">
+            </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
 
 
 
 
-
-    <%- include('layouts/_footer.ejs') %>
+        <%- include('layouts/_footer.ejs') %>
 </body>
+
 </html>
