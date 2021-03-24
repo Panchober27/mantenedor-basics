@@ -1,0 +1,1 @@
+// Archivo para el logeo de un jefe al sistema.

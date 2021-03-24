@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('layouts/_head.ejs') %>
+        <title>Lista Jefes</title>
+</head>
+
+<body>
+    <%- include('layouts/_nav.ejs') %>
+        <h1 style="text-align: center;">Listado de Jefes</h1>
+
+        <div class="container">
+            <div class="row">
+                <% for(let i=0; i < rows.length; i++) { %>
+                    <div class="col-12 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img src=" <%= rows[i].imagen %> " class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= rows[i].nombres %>
+                                        <%= rows[i].apellido_pat %>
+                                </h5>
+                                <p class="card-text">
+                                    RUT: <%= rows[i].rut %>
+                                </p>
+                                <a href="#" class="btn btn-primary">Editar Jefe</a>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+        <%- include('layouts/_footer.ejs') %>
+
+
+</body>
+
+</html>
