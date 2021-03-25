@@ -8,22 +8,15 @@ empleadosController.list = (req, res) => {
       if (err) {
         console.log(err);
       }
-      res.render("list-emp", { rows });
+      res.render("empleados/list-emp", { rows });
     });
   });
 };
 
+
 // Añadir un nuevo empleado.
-empleadosController.addEmp = (req, res) => {
-  req.getConnection((err, conn) => {
-    conn.query("INSERT INTO empleado set ?", [req.body]);
-    if (err) {
-      console.log(err);
-      res.send("Error al insertar empleado 😔");
-    }
-    console.log(`Se inserto un empleado ${req.body}`);
-    res.send(`${req.body}`);
-  });
+empleadosController.addEmpleado = (req, res) => {
+  res.send("Empleado recibido");
 };
 
 module.exports = empleadosController;

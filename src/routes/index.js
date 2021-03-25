@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const empleadosController = require("../controllers/empleadosController");
-const jefesController = require('../controllers/jefesController');
-
+const jefesController = require("../controllers/jefesController");
 
 // Ruta principal del sitio.
 router.get("/", (req, res) => {
@@ -12,19 +11,13 @@ router.get("/", (req, res) => {
   });
 });
 
-
-
 // Ruta para logear un jefe.
-router.get('/logJefe', jefesController.login);
+router.get("/logJefe", jefesController.login);
 
-// Ruta para listar los empleados.
-router.get("/list-emp", empleadosController.list);
 
 // Ruta para listar jefes.
-router.get('/list-jefes', jefesController.list);
+router.get("/list-jefes", jefesController.list);
 
-// Ruta para añadir un empleado.
-router.get("/add-emp", empleadosController.addEmp);
 
 // Ruta para modificar un empleado.
 

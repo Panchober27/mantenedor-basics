@@ -1,6 +1,18 @@
 // Archivo para manejo de los jefes😋
-
 const jefesController = {};
+
+// Listado de los jefes.
+jefesController.list = (req, res) => {
+  req.getConnection((err, conn) => {
+    conn.query("SELECT * FROM jefe", (err, rows) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(rows);
+      res.render("jefes/list-jefes", { rows });
+    });
+  });
+};
 
 // Login de jefes.
 jefesController.login = (req, res, usr, pass) => {
@@ -16,19 +28,6 @@ jefesController.login = (req, res, usr, pass) => {
         res.render("loged", { rows });
       }
     );
-  });
-};
-
-// Listado de los jefes.
-jefesController.list = (req, res) => {
-  req.getConnection((err, conn) => {
-    conn.query("SELECT * FROM jefe", (err, rows) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log(rows);
-      res.render("list-jefes", { rows });
-    });
   });
 };
 
