@@ -13,6 +13,41 @@
         <h1 style="text-align: center;">Vista para añadir un nuevo empleado.</h1>
 
 
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Añadir la accion del formulario hacia la ruta especifica -->
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="nombres" placeholder="Nombres">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="apellido_pat" placeholder="Apellido Paterno">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="apellido_mat" placeholder="Apellido Materno">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="rut" placeholder="Rut">
+                                </div>
+                                <div class="form-group">
+                                    <input type="url" name="imagen" placeholder="Url de su Imagen de perfil">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit">
+                                        Añadir Empleado
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     <%- include('../layouts/_footer.ejs') %>
 </body>

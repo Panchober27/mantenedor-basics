@@ -53,6 +53,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes.
 app.use(require("./routes"));
 app.use(require("./routes/empleados"));
+app.use(require('./routes/jefes'));
 
 // Starting the server.
 app.listen(port, () => {

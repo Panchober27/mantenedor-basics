@@ -14,6 +14,8 @@ jefesController.list = (req, res) => {
   });
 };
 
+
+// Esto no esta correcto aqui, se cambiara de carpeta y de logica 😁
 // Login de jefes.
 jefesController.login = (req, res, usr, pass) => {
   req.getConnection((err, conn) => {
